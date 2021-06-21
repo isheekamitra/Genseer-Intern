@@ -4,8 +4,6 @@ import axios from 'axios'
 import {showErrMsg, showSuccessMsg} from '../../utils/notification/Notification'
 import {dispatchLogin} from '../../../redux/actions/authAction'
 import {useDispatch} from 'react-redux'
-import { GoogleLogin } from 'react-google-login';
-import FacebookLogin from 'react-facebook-login';
 
 
 const initialState = {
@@ -101,24 +99,6 @@ function Login() {
                 </div>
             </form>
 
-            <div className="hr">Or Login With</div>
-
-            <div className="social">
-                <GoogleLogin
-                    clientId="Your google client id"
-                    buttonText="Login with google"
-                    onSuccess={responseGoogle}
-                    cookiePolicy={'single_host_origin'}
-                />
-                
-                <FacebookLogin
-                appId="Your facebook app id"
-                autoLoad={false}
-                fields="name,email,picture"
-                callback={responseFacebook} 
-                />
-
-            </div>
 
             <p>New Customer? <Link to="/register">Register</Link></p>
         </div>
