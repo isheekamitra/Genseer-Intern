@@ -43,36 +43,7 @@ function Login() {
         }
     }
 
-    const responseGoogle = async (response) => {
-        try {
-            const res = await axios.post('/user/google_login', {tokenId: response.tokenId})
-
-            setUser({...user, error:'', success: res.data.msg})
-            localStorage.setItem('firstLogin', true)
-
-            dispatch(dispatchLogin())
-            history.push('/')
-        } catch (err) {
-            err.response.data.msg && 
-            setUser({...user, err: err.response.data.msg, success: ''})
-        }
-    }
-
-    const responseFacebook = async (response) => {
-        try {
-            const {accessToken, userID} = response
-            const res = await axios.post('/user/facebook_login', {accessToken, userID})
-
-            setUser({...user, error:'', success: res.data.msg})
-            localStorage.setItem('firstLogin', true)
-
-            dispatch(dispatchLogin())
-            history.push('/')
-        } catch (err) {
-            err.response.data.msg && 
-            setUser({...user, err: err.response.data.msg, success: ''})
-        }
-    }
+    
 
     return (
         <div className="login_page">

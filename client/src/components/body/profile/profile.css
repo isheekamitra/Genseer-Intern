@@ -4,7 +4,7 @@
     flex-wrap: wrap;
 }
 .profile_page .col-left{
-    max-width: 400px;
+    max-width: 100%;
     min-width: 300px;
     padding: 0 10px;
     margin: auto;
