@@ -1,0 +1,87 @@
+.contact_info_item{
+    display: flex;
+    flex-direction: row;
+  }
+  .contact_info_item img{
+    height: 40px;
+    width: 40px;
+    margin-top: 30px;
+  }
+  .contact_form{
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 70px 250px;
+   
+  }
+  .contact_info_item{
+    padding: 0px 30px;
+    padding-bottom: 9px;
+    margin-top: 20px;
+    box-shadow:
+    inset 0 1px 0 rgba(255,255,255,0.5),
+    0 2px 2px rgba(0,0,0,0.3),
+    0 0 4px 1px rgba(0,0,0,0.2);
+    
+  }
+  .contact_info_title{
+    display: flex;
+   flex-direction: column;
+   margin-top: 17px;
+   font-size: smaller;
+   
+  }
+  
+  .contact_info_item img{
+    margin: 3px;
+    padding: 2px;
+  }
+  .contact_form_title{
+    padding:  10px;
+    font-size: 30px;
+   
+    font-weight: 600;
+  }
+  .contact_form_name{
+  
+    display: flex;
+    flex-direction: column;
+    
+  }
+  .input_feild{
+    margin-bottom: 10px;
+    padding: 
+    10px;
+    outline: none;
+    box-shadow: 
+      inset 0 2px 3px rgba(255,255,255,0.3),
+      inset 0 -2px 3px rgba(0,0,0,0.3),
+      0 1px 1px rgba(255,255,255,0.9);
+    border: none;
+  }
+  .contact-form-text{
+    text-align: center;
+  }
+  .text_feild {
+    padding: 20px;
+    border: none;
+    box-shadow: 
+      inset 0 2px 3px rgba(255,255,255,0.3),
+      inset 0 -2px 3px rgba(0,0,0,0.3),
+      0 1px 1px rgba(255,255,255,0.9);
+      outline: none;
+  }
+  
+  .contact_form_button button{
+    background-color: rgb(3, 116, 192);
+    padding: 9px 25px;
+    outline: none;
+    border: none;
+    color: white;
+    margin-top: 10px;
+  }
+  .contact_form_button button:hover{
+    background-color: rgb(9, 145, 236);
+  }
+  

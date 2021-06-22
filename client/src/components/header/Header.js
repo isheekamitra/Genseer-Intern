@@ -27,7 +27,7 @@ function Header() {
             </Link>
             <ul className="dropdown">
                 <li><Link to="/profile">Profile</Link></li>
-                <li><Link to="/" onClick={handleLogout}>Logout</Link></li>
+                <li><Link to={auth.isAdmin?'/users':'/live'} onClick={handleLogout}>Logout</Link></li>
             </ul>
         </li>
     }
