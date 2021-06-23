@@ -14,6 +14,7 @@ import EditUser from '../body/profile/EditUser'
 import Home from '../body/home/Home'
 
 import {useSelector} from 'react-redux'
+import Questiontable from '../Questiontable'
 
 function Body() {
     const auth = useSelector(state => state.auth)
@@ -22,7 +23,7 @@ function Body() {
         <section>
             <Switch>
                 <Route path="/" component={Home} exact />
-
+               {isAdmin&& <Route path="/question" component={!isLogged ? NotFound : Questiontable} exact />}
                 <Route path="/login" component={isLogged ? NotFound : Login} exact />
                 <Route path="/register" component={isLogged ? NotFound : Register} exact />
 

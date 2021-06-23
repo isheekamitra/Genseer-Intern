@@ -21,15 +21,26 @@ function Header() {
     }
 
     const userLink = () => {
-        return <li className="drop-nav">
+        return <>
+           {auth.isAdmin && <li><Link to={'/question'}>Question</Link></li>}
+           {auth.isAdmin && <li><Link to={'/users'}>Users</Link></li>}
+        <li className="drop-nav" >
             <Link to="#" className="avatar">
             <img src={user.avatar} alt=""/> {user.name} <i className="fas fa-angle-down"></i>
             </Link>
             <ul className="dropdown">
                 <li><Link to="/profile">Profile</Link></li>
                 <li><Link to={auth.isAdmin?'/users':'/live'} onClick={handleLogout}>Logout</Link></li>
+             
             </ul>
+          
+          
         </li>
+    
+         
+            
+        </>
+        
     }
 
     const transForm = {

@@ -1,17 +1,12 @@
 import React from 'react'
 import QuestionForm from './QuestionForm'
-import { useSelector } from 'react-redux'
+
 
 
 
 
 const Live = () => {
-    const auth = useSelector(state => state.auth)
-    const { isLogged } = auth
-
-    //console.log(isLogged)
-    //console.log(user)
-
+    
 
     return (
     

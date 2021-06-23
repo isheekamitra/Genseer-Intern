@@ -21,7 +21,7 @@ function Home() {
     const {user} = auth
   const [data, setData] = useState(initialState)
 
-
+// eslint-disable-next-line
     const [loading, setLoading] = useState(false)
     const [callback, setCallback] = useState(false)
 

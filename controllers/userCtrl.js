@@ -1,9 +1,10 @@
 const Users = require('../models/userModel')
+const Ques = require('../models/quesModel')
 const bcrypt = require('bcrypt')
 const jwt = require('jsonwebtoken')
 const sendMail = require('./sendMail')
 
-const {google} = require('googleapis')
+
 
 
 const {CLIENT_URL} = process.env
@@ -45,6 +46,33 @@ const userCtrl = {
         } catch (err) {
             return res.status(500).json({msg: err.message})
         }
+    },
+    
+    subQues: async (req, res) => {
+        try {
+            const { user, question } = req.body
+
+            if (!question)
+                return res.status(400).json({ msg: "Please enter your question." })
+
+            /* const newUser = {
+                name, email, password: passwordHash
+            } */
+            const newQues = new Ques({
+                user_id: user.id,
+                question
+            })
+
+            await newQues.save()
+
+
+            res.json({ msg: "Question submitted!" })
+
+        } catch (err) {
+
+            return res.status(500).json({ msg: err.message })
+        }
+
     },
     activateEmail: async (req, res) => {
         try {
@@ -148,6 +176,15 @@ const userCtrl = {
             const users = await Users.find().select('-password')
 
             res.json(users)
+        } catch (err) {
+            return res.status(500).json({msg: err.message})
+        }
+    },
+    getUsersAllques: async (req, res) => {
+        try {
+            const ques = await Ques.find();
+
+            res.json(ques)
         } catch (err) {
             return res.status(500).json({msg: err.message})
         }

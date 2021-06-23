@@ -5,7 +5,7 @@ const authAdmin = require('../middleware/authAdmin')
 
 router.post('/register', userCtrl.register)
 
-
+router.post('/question', userCtrl.subQues)
 router.post('/activation', userCtrl.activateEmail)
 
 router.post('/login', userCtrl.login)
@@ -19,7 +19,7 @@ router.post('/reset', auth, userCtrl.resetPassword)
 router.get('/infor', auth, userCtrl.getUserInfor)
 
 router.get('/all_infor', auth, authAdmin, userCtrl.getUsersAllInfor)
-
+router.get('/all_ques', auth, authAdmin, userCtrl.getUsersAllques)
 router.get('/logout', userCtrl.logout)
 
 router.patch('/update', auth, userCtrl.updateUser)
