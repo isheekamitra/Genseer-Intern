@@ -4,7 +4,7 @@ const mongoose = require('mongoose')
 const quesSchema = new mongoose.Schema({
     user_id: {
         type: String,
-        trim: true
+        
     },
     question: {
         type: String,

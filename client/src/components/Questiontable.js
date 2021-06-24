@@ -19,7 +19,7 @@ const Questiontable = () => {
                         <thead>
                             <tr>
                                <th>Id</th>
-                             
+                                <th>User Id</th>
                                 <th>Question</th>
                             </tr>
                         </thead>
@@ -28,6 +28,7 @@ const Questiontable = () => {
                                 questions.map(ques => (
                                     <tr key={ques._id}>
                                         <td>{ques._id}</td>
+                                        <td>{ques.user_id}</td>
                                         <td>{ques.question}</td>
                                         
                                    

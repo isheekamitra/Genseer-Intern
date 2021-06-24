@@ -54,12 +54,12 @@ const userCtrl = {
 
             if (!question)
                 return res.status(400).json({ msg: "Please enter your question." })
-
+          //  console.log(user._id);
             /* const newUser = {
                 name, email, password: passwordHash
             } */
             const newQues = new Ques({
-                user_id: user.id,
+                user_id: user._id,
                 question
             })
 
