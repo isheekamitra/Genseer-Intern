@@ -20,6 +20,8 @@ const Questiontable = () => {
                             <tr>
                                <th>Id</th>
                                 <th>User Id</th>
+                                <th>User Name</th>
+                                <th>User Email</th>
                                 <th>Question</th>
                             </tr>
                         </thead>
@@ -29,6 +31,8 @@ const Questiontable = () => {
                                     <tr key={ques._id}>
                                         <td>{ques._id}</td>
                                         <td>{ques.user_id}</td>
+                                        <td>{ques.user_name}</td>
+                                        <td>{ques.user_email}</td>
                                         <td>{ques.question}</td>
                                         
                                    

@@ -6,6 +6,14 @@ const quesSchema = new mongoose.Schema({
         type: String,
         
     },
+    user_name: {
+        type: String,
+        
+    },
+    user_email: {
+        type: String,
+        
+    },
     question: {
         type: String,
         required: [true, "Please enter question!"],
